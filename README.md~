@@ -29,11 +29,11 @@ Para informações detalhadas do pacote *animate* consulte o manual [animate pac
 
 # Gerando os frames da animação de forma otimizada
 
-Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos os frames (neste caso utilizando o pacote *tikz*) e contruir a animação com o comando **\animategraphics**. Assim, fornecemos neste projeto um arquivo [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) com um código mínimo para gerar os frames. Fornecemos também [exemplos](https://github.com/gobber/blob/master/examples/) com uso dessa abordagem, em cada exemplo disponível na pasta [exemplos](https://github.com/gobber/blob/master/examples/) também está disponível um arquivo com o sufixo **-animate.tex** contendo as chamadas para gerar a animação com o comando **\animategraphics**.
+Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos os frames (neste caso utilizando o pacote *tikz*) e contruir a animação com o comando **\animategraphics**. Assim, fornecemos neste projeto um arquivo [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) com um código mínimo para gerar os frames. Fornecemos também [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) com uso dessa abordagem, em cada exemplo disponível na pasta [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) também está disponível um arquivo com o sufixo **-animate.tex** contendo as chamadas para gerar a animação com o comando **\animategraphics**.
 
 ## Arquivo main.tex
 
-Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) são dados abaixo.
+Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) são dados abaixo.
 
 ### Classe base
 
@@ -180,7 +180,7 @@ Para chamar a animação dentro do **beamer** é necessário utilizar a opção 
 % código omitido
 
 % colocando animate dentro do beamer
-\begin{frame}[fragile]{Exemplo do uso do pacote animate}
+\begin{frame}[fragile]{Animate e beamer}{Exemplo do uso do pacote animate}
   \animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}
 \end{frame}
 

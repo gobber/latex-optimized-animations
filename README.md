@@ -29,11 +29,11 @@ Para informações detalhadas do pacote *animate* consulte o manual [animate pac
 
 # Gerando os frames da animação de forma otimizada
 
-Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos os frames (neste caso utilizando o pacote *tikz*) e contruir a animação com o comando **\animategraphics**. Assim, fornecemos neste projeto um arquivo [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) com um código mínimo para gerar os frames. Fornecemos também [exemplos](https://github.com/gobber/blob/master/examples/) com uso dessa abordagem, em cada exemplo disponível na pasta [exemplos](https://github.com/gobber/blob/master/examples/) também está disponível um arquivo com o sufixo **-animate.tex** contendo as chamadas para gerar a animação com o comando **\animategraphics**.
+Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos os frames (neste caso utilizando o pacote *tikz*) e contruir a animação com o comando **\animategraphics**. Assim, fornecemos neste projeto um arquivo [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) com um código mínimo para gerar os frames. Fornecemos também [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) com uso dessa abordagem, em cada exemplo disponível na pasta [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) também está disponível um arquivo com o sufixo **-animate.tex** contendo as chamadas para gerar a animação com o comando **\animategraphics**.
 
 ## Arquivo main.tex
 
-Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) são dados abaixo.
+Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) são dados abaixo.
 
 ### Classe base
 
@@ -108,7 +108,7 @@ Finalmente, após fechar o *environment* **tikzpicture** adicionamos os passos d
 
 ### Colocando tudo junto
 
-Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations).
+Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex).
 
 ```
 
@@ -148,7 +148,7 @@ Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber
 
 ## Criando as animações
 
-As animações podem ser incluidas dentro do **article**, **book** e **beamer**. São fornecidos nos [exemplos](https://github.com/gobber/blob/master/examples/) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
+As animações podem ser incluidas dentro do **article**, **book** e **beamer**. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
 
 ```
 % classe "shell" do LaTeX
@@ -188,7 +188,7 @@ Para chamar a animação dentro do **beamer** é necessário utilizar a opção 
 ```
 ## Extras
 
-Dentro de cada exemplo disponível na pasta [exemplos](https://github.com/gobber/blob/master/examples/) é fornecido um arquivo de *shell* linux **clean.sh** para excluir arquivos temporários gerados pelo LaTeX que muitas vezes atrapalham o desenvolvimento:
+Dentro de cada exemplo disponível na pasta [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) é fornecido um arquivo de *shell* linux **clean.sh** para excluir arquivos temporários gerados pelo LaTeX que muitas vezes atrapalham o desenvolvimento:
 
 ```
 # chamar o arquivo pelo terminal

@@ -1,0 +1,44 @@
+% classe base
+\documentclass[10pt]{article}
+
+% carregar pacotes necessários 
+\usepackage{tikz}
+\usepackage{ifthen}
+% ...
+
+% extrair os environments como figuras (pdf)
+\usepackage[tightpage,active]{preview}
+
+% vamos gerar animações utilizando tikzpicture
+\PreviewEnvironment{tikzpicture}
+
+% iniciamos o document
+\begin{document}
+
+% geralmente animações tem mais de um frame, assim é necessário utilizar um loop
+% \def\Frames{100} = 100 frames ou 100 figuras
+\def\Frames{100}
+
+% define um contador para o loop
+\xdef\i{0}
+\whiledo{\i<\Frames}{%
+	\begin{tikzpicture}
+		
+		% o valor pode ser colocado direto no comando \useasboundingbox
+		
+		\def\xI{-1} \def\xF{1} \def\yI{-1} \def\yF{1}
+		
+		% o comando useasboundingbox gera o espaço para criar as animações. Ele não é necessário, porém, sem ele os frames ficam com tamanhos diferentes (dependendo de como são construidos).		
+		
+		\useasboundingbox (\xI , \yI) rectangle (\xF , \yF);
+
+		% coloque o conteúdo aqui (frame a frame)
+	
+	\end{tikzpicture}
+	% atualiza o contador
+	\pgfmathtruncatemacro{\temp}{\i+1}%
+	\xdef\i{\temp}%
+	% cria uma nova página
+	\newpage%
+}
+\end{document}

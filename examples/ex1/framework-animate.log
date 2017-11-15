@@ -1,0 +1,1697 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.3)  14 NOV 2017 23:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**framework-animate.tex
+(./framework-animate.tex
+LaTeX2e <2017-04-15>
+Babel <3.13> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2015/07/15 v1.2 Class to compile TeX sub-files stand
+alone
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count79
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\sa@internal=\count80
+\c@sapage=\count81
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/standalone/standalone.cfg
+File: standalone.cfg 2015/07/15 v1.2 Default configuration file for 'standalone
+' class
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\sa@box=\box26
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-func/pst-func.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2017/03/17 v0.63 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count90
+\pstFP@xia=\count91
+\pstFP@xib=\count92
+\pstFP@xfa=\count93
+\pstFP@xfb=\count94
+\pstFP@rega=\count95
+\pstFP@regb=\count96
+\pstFP@regs=\count97
+\pstFP@times=\count98
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen103
+\pgfutil@tempdimb=\dimen104
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks19
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgf@x=\dimen105
+\pgf@xa=\dimen106
+\pgf@xb=\dimen107
+\pgf@xc=\dimen108
+\pgf@y=\dimen109
+\pgf@ya=\dimen110
+\pgf@yb=\dimen111
+\pgf@yc=\dimen112
+\c@pgf@counta=\count99
+\c@pgf@countb=\count100
+\c@pgf@countc=\count101
+\c@pgf@countd=\count102
+\pgfutil@tempcnta=\count103
+\pgfutil@tempcntb=\count104
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count105
+\pgfmath@box=\box27
+\pgfmath@toks=\toks20
+\pgfmath@stack@operand=\toks21
+\pgfmath@stack@operation=\toks22
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count106
+))
+\pgffor@iter=\dimen114
+\pgffor@skip=\dimen115
+\pgffor@stack=\toks23
+\pgffor@toks=\toks24
+)
+\psLoopIndex=\count107
+
+`PSTricks' v2.72b  <2017/04/19> (tvz)
+\pst@dima=\dimen116
+\pst@dimb=\dimen117
+\pst@dimc=\dimen118
+\pst@dimd=\dimen119
+\pst@dimg=\dimen120
+\pst@dimh=\dimen121
+\pst@dimm=\dimen122
+\pst@dimn=\dimen123
+\pst@dimo=\dimen124
+\pst@dimp=\dimen125
+\pst@hbox=\box28
+\pst@ibox=\box29
+\pst@boxg=\box30
+\pst@cnta=\count108
+\pst@cntb=\count109
+\pst@cntc=\count110
+\pst@cntd=\count111
+\pst@cntg=\count112
+\pst@cnth=\count113
+\pst@cntm=\count114
+\pst@cntn=\count115
+\pst@cnto=\count116
+\pst@cntp=\count117
+\@zero=\count118
+\pst@toks=\toks25
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen126
+\psxunit=\dimen127
+\psyunit=\dimen128
+\pst@C@@rType=\count119
+\pslinewidth=\dimen129
+\psk@startLW=\dimen130
+\psk@endLW=\dimen131
+\pst@customdefs=\toks26
+\pslinearc=\dimen132
+\pst@symbolStep=\dimen133
+\pst@symbolWidth=\dimen134
+\pst@symbolLinewidth=\dimen135
+\everypsbox=\toks27
+\psframesep=\dimen136
+\pslabelsep=\dimen137
+\sh@wgridXunit=\dimen138
+\sh@wgridYunit=\dimen139
+\pst@shift=\dimen140
+)
+File: pstricks.tex 2017/04/19 v2.72b `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2017/04/19 v2.72b `PST-fp' (hv)
+)
+Package: pst-func 2017/08/17 package wrapper for pst-func.tex (hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-plot/pst-plot.sty
+Package: pst-plot 2011/06/05 v1.00 LaTeX wrapper for `pst-plot' (HV)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
+Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count120
+\multidocount=\count121
+\multido@stuff=\toks28
+)
+File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
+)
+Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-plot/pst-plot.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-tools/pst-tools.tex
+`PST-tools' v0.08, 2017/10/02 (hv))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-node/pst-node.tex
+ v1.39, 2017/01/20
+\psrow=\count122
+\pscol=\count123
+\psmatrixcnt=\count124
+\psrowsep=\skip43
+\pscolsep=\skip44
+\pst@args=\count125
+\num@pts=\count126
+\pst@argcnt=\count127
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-arrow/pst-arrow.tex
+`pst-arrow' v0.01, 2016/09/01 (dr,hv)
+\pshooklength=\dimen141
+\pshookwidth=\dimen142
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+`PST-3d' v1.11, 2010/02/14 (tvz))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.63 , (CJ,hv)) `pstricks-add' v3.84, 2017/09/16 (dr,hv)
+\psparallelogramsep=\dimen143
+\pst@cntC=\count128
+\chart@ColorIndex=\dimen144
+\chart@ColorStep=\dimen145
+\pst@chartHeight=\dimen146
+\pst@chartStackDepth=\dimen147
+\pst@chartStackWidth=\dimen148
+\chart@Toggle=\count129
+\psVectorCtr=\count130
+)
+ v1.84, 2017/08/31 (tvz,hv)
+\pstRadUnit=\dimen149
+\pstRadUnitInv=\dimen150
+\pst@linecnt=\count131
+\RCD@file=\read1
+\psxlabelsep=\dimen151
+\psylabelsep=\dimen152
+\psk@subticksize=\dimen153
+\pst@xticksizeA=\dimen154
+\pst@xticksizeB=\dimen155
+\pst@xticksizeC=\dimen156
+\pst@yticksizeA=\dimen157
+\pst@yticksizeB=\dimen158
+\pst@yticksizeC=\dimen159
+\@digitcounter=\count132
+\psk@llx=\dimen160
+\psk@lly=\dimen161
+\psk@urx=\dimen162
+\psk@ury=\dimen163
+\pst@xunit=\dimen164
+\pst@yunit=\dimen165
+)
+File: pst-plot.tex 2017/08/31 1.84 `pst-plot' (tvz,hv)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-math/pst-math.sty
+Package: pst-math 2014/07/30 package wrapper for PSTricks pst-math.tex
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-math/pst-math.tex)
+File: pst-math.tex 2017/08/31 v1.84 `PST-math' (hv)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-tools/pst-tools.sty
+Package: pst-tools 2012/01/01 package wrapper for pst-tools.tex (hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-tools/pst-tools.tex)
+File: pst-tools.tex 2017/08/31 v1.84 `PST-tools' (hv)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-node/pst-node.sty
+Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-node/pst-node.tex)
+File: pst-node.tex 2017/08/31 1.84 `pst-node' (tvz,hv)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-3d/pst-3d.tex)
+File: pst-3d.tex 2017/08/31 v1.84 `PST-3d' (hv)
+)
+Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
+hv)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex)
+File: pstricks-add.tex 2017/08/31 v1.84 `PSTricks-add' (hv)
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/pst-func/pst-func.tex
+`PST-func' v0.88, 2017/08/24 (hv)
+\psk@zeroLineWidth=\dimen166
+)
+File: pst-func.tex 2017/08/24 v0.88 `PST-func' (hv)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2017/09/29 PDF animations from files and inline graphics
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count133
+\calc@Bcount=\count134
+\calc@Adimen=\dimen167
+\calc@Bdimen=\dimen168
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count135
+\calc@Cskip=\skip47
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/media9/pdfbase.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/09/18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/09/18 L3 programming layer (code)
+\c_max_int=\count136
+\l_tmpa_int=\count137
+\l_tmpb_int=\count138
+\g_tmpa_int=\count139
+\g_tmpb_int=\count140
+\g__intarray_font_int=\count141
+\g__prg_map_int=\count142
+\c_log_iow=\count143
+\l_iow_line_count_int=\count144
+\l__iow_line_target_int=\count145
+\l__iow_one_indent_int=\count146
+\l__iow_indent_int=\count147
+\c_zero_dim=\dimen169
+\c_max_dim=\dimen170
+\l_tmpa_dim=\dimen171
+\l_tmpb_dim=\dimen172
+\g_tmpa_dim=\dimen173
+\g_tmpb_dim=\dimen174
+\c_zero_skip=\skip48
+\c_max_skip=\skip49
+\l_tmpa_skip=\skip50
+\l_tmpb_skip=\skip51
+\g_tmpa_skip=\skip52
+\g_tmpb_skip=\skip53
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count148
+\c__fp_leading_shift_int=\count149
+\c__fp_middle_shift_int=\count150
+\c__fp_trailing_shift_int=\count151
+\c__fp_big_leading_shift_int=\count152
+\c__fp_big_middle_shift_int=\count153
+\c__fp_big_trailing_shift_int=\count154
+\c__fp_Bigg_leading_shift_int=\count155
+\c__fp_Bigg_middle_shift_int=\count156
+\c__fp_Bigg_trailing_shift_int=\count157
+\c__fp_rand_size_int=\count158
+\c__fp_rand_four_int=\count159
+\c__fp_rand_eight_int=\count160
+\l__sort_length_int=\count161
+\l__sort_min_int=\count162
+\l__sort_top_int=\count163
+\l__sort_max_int=\count164
+\l__sort_true_max_int=\count165
+\l__sort_block_int=\count166
+\l__sort_begin_int=\count167
+\l__sort_end_int=\count168
+\l__sort_A_int=\count169
+\l__sort_B_int=\count170
+\l__sort_C_int=\count171
+\l__tl_build_start_index_int=\count172
+\l__tl_build_index_int=\count173
+\l__tl_analysis_normal_int=\count174
+\l__tl_analysis_index_int=\count175
+\l__tl_analysis_nesting_int=\count176
+\l__tl_analysis_type_int=\count177
+\l__regex_internal_a_int=\count178
+\l__regex_internal_b_int=\count179
+\l__regex_internal_c_int=\count180
+\l__regex_balance_int=\count181
+\l__regex_group_level_int=\count182
+\l__regex_mode_int=\count183
+\c__regex_cs_in_class_mode_int=\count184
+\c__regex_cs_mode_int=\count185
+\l__regex_catcodes_int=\count186
+\l__regex_default_catcodes_int=\count187
+\c__regex_catcode_D_int=\count188
+\c__regex_catcode_S_int=\count189
+\c__regex_catcode_L_int=\count190
+\c__regex_catcode_O_int=\count191
+\c__regex_catcode_A_int=\count192
+\c__regex_all_catcodes_int=\count193
+\l__regex_show_lines_int=\count194
+\l__regex_min_state_int=\count195
+\l__regex_max_state_int=\count196
+\l__regex_left_state_int=\count197
+\l__regex_right_state_int=\count198
+\l__regex_capturing_group_int=\count199
+\l__regex_min_pos_int=\count266
+\l__regex_max_pos_int=\count267
+\l__regex_curr_pos_int=\count268
+\l__regex_start_pos_int=\count269
+\l__regex_success_pos_int=\count270
+\l__regex_curr_char_int=\count271
+\l__regex_curr_catcode_int=\count272
+\l__regex_last_char_int=\count273
+\l__regex_case_changed_char_int=\count274
+\l__regex_curr_state_int=\count275
+\l__regex_step_int=\count276
+\l__regex_min_active_int=\count277
+\l__regex_max_active_int=\count278
+\l__regex_replacement_csnames_int=\count279
+\l__regex_match_count_int=\count280
+\l__regex_min_submatch_int=\count281
+\l__regex_submatch_int=\count282
+\l__regex_zeroth_submatch_int=\count283
+\g__debug_trace_regex_int=\count284
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+\l__box_top_dim=\dimen175
+\l__box_bottom_dim=\dimen176
+\l__box_left_dim=\dimen177
+\l__box_right_dim=\dimen178
+\l__box_top_new_dim=\dimen179
+\l__box_bottom_new_dim=\dimen180
+\l__box_left_new_dim=\dimen181
+\l__box_right_new_dim=\dimen182
+\l__box_internal_box=\box36
+\l__coffin_internal_box=\box37
+\l__coffin_internal_dim=\dimen183
+\l__coffin_offset_x_dim=\dimen184
+\l__coffin_offset_y_dim=\dimen185
+\l__coffin_x_dim=\dimen186
+\l__coffin_y_dim=\dimen187
+\l__coffin_x_prime_dim=\dimen188
+\l__coffin_y_prime_dim=\dimen189
+\c_empty_coffin=\box38
+\l__coffin_aligned_coffin=\box39
+\l__coffin_aligned_internal_coffin=\box40
+\l_tmpa_coffin=\box41
+\l_tmpb_coffin=\box42
+\l__coffin_display_coffin=\box43
+\l__coffin_display_coord_coffin=\box44
+\l__coffin_display_pole_coffin=\box45
+\l__coffin_display_offset_dim=\dimen190
+\l__coffin_display_x_dim=\dimen191
+\l__coffin_display_y_dim=\dimen192
+\l__coffin_bounding_shift_dim=\dimen193
+\l__coffin_left_corner_dim=\dimen194
+\l__coffin_right_corner_dim=\dimen195
+\l__coffin_bottom_corner_dim=\dimen196
+\l__coffin_top_corner_dim=\dimen197
+\l__coffin_scaled_total_height_dim=\dimen198
+\l__coffin_scaled_width_dim=\dimen199
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count285
+\l__driver_tmp_box=\box46
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2017/09/29 v0.18 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count286
+\g_pbs_oc_int=\count287
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2017/09/29 v0.12 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count288
+)
+\@anim@box=\box47
+\@anim@measbox=\box48
+\@anim@tmpdima=\dimen256
+\@anim@tmpdimb=\dimen257
+\@anim@num=\count289
+\@anim@curframe=\count290
+\@anim@curframe@zb=\count291
+\@anim@resizeflags=\count292
+\@anim@skipfram=\count293
+\@anim@mulframecnt=\count294
+\@anim@@tmlnfile=\read2
+\@anim@tmpcnt=\count295
+\c@@anim@ltxcnt=\count296
+\@anim@curlayer=\count297
+\@anim@lineno=\count298
+\@anim@curfield=\count299
+\@anim@@resizeflags=\count300
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen258
+\Gin@req@width=\dimen259
+)
+(./framework-animate.aux)
+\openout1 = `framework-animate.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count301
+\scratchdimen=\dimen260
+\scratchbox=\box49
+\nofMPsegments=\count302
+\nofMParguments=\count303
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count304
+\MPscratchDim=\dimen261
+\MPnumerator=\count305
+\makeMPintoPDFobject=\count306
+\everyMPtoPDFconversion=\toks30
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<framework.pdf, id=13, page=1, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 1>
+Package pdftex.def Info: framework.pdf , page1 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdf
+tex.map}> <a0,fr0>
+<framework.pdf, id=52, page=2, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 2>
+Package pdftex.def Info: framework.pdf , page2 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr1>
+<framework.pdf, id=61, page=3, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 3>
+Package pdftex.def Info: framework.pdf , page3 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr2>
+<framework.pdf, id=70, page=4, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 4>
+Package pdftex.def Info: framework.pdf , page4 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr3>
+<framework.pdf, id=79, page=5, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 5>
+Package pdftex.def Info: framework.pdf , page5 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr4>
+<framework.pdf, id=88, page=6, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 6>
+Package pdftex.def Info: framework.pdf , page6 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr5>
+<framework.pdf, id=97, page=7, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 7>
+Package pdftex.def Info: framework.pdf , page7 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr6>
+<framework.pdf, id=106, page=8, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 8>
+Package pdftex.def Info: framework.pdf , page8 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr7>
+<framework.pdf, id=115, page=9, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 9>
+Package pdftex.def Info: framework.pdf , page9 used on input line 11. on input 
+line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr8>
+<framework.pdf, id=124, page=10, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 10>
+Package pdftex.def Info: framework.pdf , page10 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr9>
+<framework.pdf, id=133, page=11, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 11>
+Package pdftex.def Info: framework.pdf , page11 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr10>
+<framework.pdf, id=142, page=12, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 12>
+Package pdftex.def Info: framework.pdf , page12 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr11>
+<framework.pdf, id=151, page=13, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 13>
+Package pdftex.def Info: framework.pdf , page13 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr12>
+<framework.pdf, id=160, page=14, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 14>
+Package pdftex.def Info: framework.pdf , page14 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr13>
+<framework.pdf, id=169, page=15, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 15>
+Package pdftex.def Info: framework.pdf , page15 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr14>
+<framework.pdf, id=178, page=16, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 16>
+Package pdftex.def Info: framework.pdf , page16 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr15>
+<framework.pdf, id=187, page=17, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 17>
+Package pdftex.def Info: framework.pdf , page17 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr16>
+<framework.pdf, id=196, page=18, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 18>
+Package pdftex.def Info: framework.pdf , page18 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr17>
+<framework.pdf, id=205, page=19, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 19>
+Package pdftex.def Info: framework.pdf , page19 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr18>
+<framework.pdf, id=214, page=20, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 20>
+Package pdftex.def Info: framework.pdf , page20 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr19>
+<framework.pdf, id=223, page=21, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 21>
+Package pdftex.def Info: framework.pdf , page21 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr20>
+<framework.pdf, id=232, page=22, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 22>
+Package pdftex.def Info: framework.pdf , page22 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr21>
+<framework.pdf, id=241, page=23, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 23>
+Package pdftex.def Info: framework.pdf , page23 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr22>
+<framework.pdf, id=250, page=24, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 24>
+Package pdftex.def Info: framework.pdf , page24 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr23>
+<framework.pdf, id=260, page=25, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 25>
+Package pdftex.def Info: framework.pdf , page25 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr24>
+<framework.pdf, id=269, page=26, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 26>
+Package pdftex.def Info: framework.pdf , page26 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr25>
+<framework.pdf, id=278, page=27, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 27>
+Package pdftex.def Info: framework.pdf , page27 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr26>
+<framework.pdf, id=287, page=28, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 28>
+Package pdftex.def Info: framework.pdf , page28 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr27>
+<framework.pdf, id=296, page=29, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 29>
+Package pdftex.def Info: framework.pdf , page29 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr28>
+<framework.pdf, id=305, page=30, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 30>
+Package pdftex.def Info: framework.pdf , page30 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr29>
+<framework.pdf, id=314, page=31, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 31>
+Package pdftex.def Info: framework.pdf , page31 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr30>
+<framework.pdf, id=323, page=32, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 32>
+Package pdftex.def Info: framework.pdf , page32 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr31>
+<framework.pdf, id=332, page=33, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 33>
+Package pdftex.def Info: framework.pdf , page33 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr32>
+<framework.pdf, id=341, page=34, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 34>
+Package pdftex.def Info: framework.pdf , page34 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr33>
+<framework.pdf, id=350, page=35, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 35>
+Package pdftex.def Info: framework.pdf , page35 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr34>
+<framework.pdf, id=359, page=36, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 36>
+Package pdftex.def Info: framework.pdf , page36 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr35>
+<framework.pdf, id=368, page=37, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 37>
+Package pdftex.def Info: framework.pdf , page37 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr36>
+<framework.pdf, id=377, page=38, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 38>
+Package pdftex.def Info: framework.pdf , page38 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr37>
+<framework.pdf, id=386, page=39, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 39>
+Package pdftex.def Info: framework.pdf , page39 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr38>
+<framework.pdf, id=395, page=40, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 40>
+Package pdftex.def Info: framework.pdf , page40 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr39>
+<framework.pdf, id=404, page=41, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 41>
+Package pdftex.def Info: framework.pdf , page41 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr40>
+<framework.pdf, id=413, page=42, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 42>
+Package pdftex.def Info: framework.pdf , page42 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr41>
+<framework.pdf, id=422, page=43, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 43>
+Package pdftex.def Info: framework.pdf , page43 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr42>
+<framework.pdf, id=431, page=44, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 44>
+Package pdftex.def Info: framework.pdf , page44 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr43>
+<framework.pdf, id=440, page=45, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 45>
+Package pdftex.def Info: framework.pdf , page45 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr44>
+<framework.pdf, id=449, page=46, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 46>
+Package pdftex.def Info: framework.pdf , page46 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr45>
+<framework.pdf, id=458, page=47, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 47>
+Package pdftex.def Info: framework.pdf , page47 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr46>
+<framework.pdf, id=467, page=48, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 48>
+Package pdftex.def Info: framework.pdf , page48 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr47>
+<framework.pdf, id=476, page=49, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 49>
+Package pdftex.def Info: framework.pdf , page49 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr48>
+<framework.pdf, id=486, page=50, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 50>
+Package pdftex.def Info: framework.pdf , page50 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr49>
+<framework.pdf, id=495, page=51, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 51>
+Package pdftex.def Info: framework.pdf , page51 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr50>
+<framework.pdf, id=504, page=52, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 52>
+Package pdftex.def Info: framework.pdf , page52 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr51>
+<framework.pdf, id=513, page=53, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 53>
+Package pdftex.def Info: framework.pdf , page53 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr52>
+<framework.pdf, id=522, page=54, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 54>
+Package pdftex.def Info: framework.pdf , page54 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr53>
+<framework.pdf, id=531, page=55, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 55>
+Package pdftex.def Info: framework.pdf , page55 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr54>
+<framework.pdf, id=540, page=56, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 56>
+Package pdftex.def Info: framework.pdf , page56 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr55>
+<framework.pdf, id=549, page=57, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 57>
+Package pdftex.def Info: framework.pdf , page57 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr56>
+<framework.pdf, id=558, page=58, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 58>
+Package pdftex.def Info: framework.pdf , page58 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr57>
+<framework.pdf, id=567, page=59, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 59>
+Package pdftex.def Info: framework.pdf , page59 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr58>
+<framework.pdf, id=576, page=60, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 60>
+Package pdftex.def Info: framework.pdf , page60 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr59>
+<framework.pdf, id=585, page=61, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 61>
+Package pdftex.def Info: framework.pdf , page61 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr60>
+<framework.pdf, id=594, page=62, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 62>
+Package pdftex.def Info: framework.pdf , page62 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr61>
+<framework.pdf, id=603, page=63, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 63>
+Package pdftex.def Info: framework.pdf , page63 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr62>
+<framework.pdf, id=612, page=64, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 64>
+Package pdftex.def Info: framework.pdf , page64 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr63>
+<framework.pdf, id=621, page=65, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 65>
+Package pdftex.def Info: framework.pdf , page65 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr64>
+<framework.pdf, id=630, page=66, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 66>
+Package pdftex.def Info: framework.pdf , page66 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr65>
+<framework.pdf, id=639, page=67, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 67>
+Package pdftex.def Info: framework.pdf , page67 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr66>
+<framework.pdf, id=648, page=68, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 68>
+Package pdftex.def Info: framework.pdf , page68 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr67>
+<framework.pdf, id=657, page=69, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 69>
+Package pdftex.def Info: framework.pdf , page69 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr68>
+<framework.pdf, id=666, page=70, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 70>
+Package pdftex.def Info: framework.pdf , page70 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr69>
+<framework.pdf, id=675, page=71, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 71>
+Package pdftex.def Info: framework.pdf , page71 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr70>
+<framework.pdf, id=684, page=72, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 72>
+Package pdftex.def Info: framework.pdf , page72 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr71>
+<framework.pdf, id=693, page=73, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 73>
+Package pdftex.def Info: framework.pdf , page73 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr72>
+<framework.pdf, id=702, page=74, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 74>
+Package pdftex.def Info: framework.pdf , page74 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr73>
+<framework.pdf, id=712, page=75, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 75>
+Package pdftex.def Info: framework.pdf , page75 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr74>
+<framework.pdf, id=721, page=76, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 76>
+Package pdftex.def Info: framework.pdf , page76 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr75>
+<framework.pdf, id=730, page=77, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 77>
+Package pdftex.def Info: framework.pdf , page77 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr76>
+<framework.pdf, id=739, page=78, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 78>
+Package pdftex.def Info: framework.pdf , page78 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr77>
+<framework.pdf, id=748, page=79, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 79>
+Package pdftex.def Info: framework.pdf , page79 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr78>
+<framework.pdf, id=757, page=80, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 80>
+Package pdftex.def Info: framework.pdf , page80 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr79>
+<framework.pdf, id=766, page=81, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 81>
+Package pdftex.def Info: framework.pdf , page81 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr80>
+<framework.pdf, id=775, page=82, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 82>
+Package pdftex.def Info: framework.pdf , page82 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr81>
+<framework.pdf, id=784, page=83, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 83>
+Package pdftex.def Info: framework.pdf , page83 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr82>
+<framework.pdf, id=793, page=84, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 84>
+Package pdftex.def Info: framework.pdf , page84 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr83>
+<framework.pdf, id=802, page=85, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 85>
+Package pdftex.def Info: framework.pdf , page85 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr84>
+<framework.pdf, id=811, page=86, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 86>
+Package pdftex.def Info: framework.pdf , page86 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr85>
+<framework.pdf, id=820, page=87, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 87>
+Package pdftex.def Info: framework.pdf , page87 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr86>
+<framework.pdf, id=829, page=88, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 88>
+Package pdftex.def Info: framework.pdf , page88 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr87>
+<framework.pdf, id=838, page=89, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 89>
+Package pdftex.def Info: framework.pdf , page89 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr88>
+<framework.pdf, id=847, page=90, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 90>
+Package pdftex.def Info: framework.pdf , page90 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr89>
+<framework.pdf, id=856, page=91, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 91>
+Package pdftex.def Info: framework.pdf , page91 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr90>
+<framework.pdf, id=865, page=92, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 92>
+Package pdftex.def Info: framework.pdf , page92 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr91>
+<framework.pdf, id=874, page=93, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 93>
+Package pdftex.def Info: framework.pdf , page93 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr92>
+<framework.pdf, id=883, page=94, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 94>
+Package pdftex.def Info: framework.pdf , page94 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr93>
+<framework.pdf, id=892, page=95, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 95>
+Package pdftex.def Info: framework.pdf , page95 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr94>
+<framework.pdf, id=901, page=96, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 96>
+Package pdftex.def Info: framework.pdf , page96 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr95>
+<framework.pdf, id=910, page=97, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 97>
+Package pdftex.def Info: framework.pdf , page97 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr96>
+<framework.pdf, id=919, page=98, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 98>
+Package pdftex.def Info: framework.pdf , page98 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr97>
+<framework.pdf, id=928, page=99, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 99>
+Package pdftex.def Info: framework.pdf , page99 used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr98>
+<framework.pdf, id=938, page=100, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 100>
+Package pdftex.def Info: framework.pdf , page100 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr99>
+<framework.pdf, id=947, page=101, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 101>
+Package pdftex.def Info: framework.pdf , page101 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr100>
+<framework.pdf, id=956, page=102, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 102>
+Package pdftex.def Info: framework.pdf , page102 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr101>
+<framework.pdf, id=965, page=103, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 103>
+Package pdftex.def Info: framework.pdf , page103 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr102>
+<framework.pdf, id=974, page=104, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 104>
+Package pdftex.def Info: framework.pdf , page104 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr103>
+<framework.pdf, id=983, page=105, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 105>
+Package pdftex.def Info: framework.pdf , page105 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr104>
+<framework.pdf, id=992, page=106, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 106>
+Package pdftex.def Info: framework.pdf , page106 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr105>
+<framework.pdf, id=1001, page=107, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 107>
+Package pdftex.def Info: framework.pdf , page107 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr106>
+<framework.pdf, id=1010, page=108, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 108>
+Package pdftex.def Info: framework.pdf , page108 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr107>
+<framework.pdf, id=1019, page=109, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 109>
+Package pdftex.def Info: framework.pdf , page109 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr108>
+<framework.pdf, id=1028, page=110, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 110>
+Package pdftex.def Info: framework.pdf , page110 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr109>
+<framework.pdf, id=1037, page=111, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 111>
+Package pdftex.def Info: framework.pdf , page111 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr110>
+<framework.pdf, id=1046, page=112, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 112>
+Package pdftex.def Info: framework.pdf , page112 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr111>
+<framework.pdf, id=1055, page=113, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 113>
+Package pdftex.def Info: framework.pdf , page113 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr112>
+<framework.pdf, id=1064, page=114, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 114>
+Package pdftex.def Info: framework.pdf , page114 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr113>
+<framework.pdf, id=1073, page=115, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 115>
+Package pdftex.def Info: framework.pdf , page115 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr114>
+<framework.pdf, id=1082, page=116, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 116>
+Package pdftex.def Info: framework.pdf , page116 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr115>
+<framework.pdf, id=1091, page=117, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 117>
+Package pdftex.def Info: framework.pdf , page117 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr116>
+<framework.pdf, id=1100, page=118, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 118>
+Package pdftex.def Info: framework.pdf , page118 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr117>
+<framework.pdf, id=1109, page=119, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 119>
+Package pdftex.def Info: framework.pdf , page119 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr118>
+<framework.pdf, id=1118, page=120, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 120>
+Package pdftex.def Info: framework.pdf , page120 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr119>
+<framework.pdf, id=1127, page=121, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 121>
+Package pdftex.def Info: framework.pdf , page121 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr120>
+<framework.pdf, id=1136, page=122, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 122>
+Package pdftex.def Info: framework.pdf , page122 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr121>
+<framework.pdf, id=1145, page=123, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 123>
+Package pdftex.def Info: framework.pdf , page123 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr122>
+<framework.pdf, id=1154, page=124, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 124>
+Package pdftex.def Info: framework.pdf , page124 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr123>
+<framework.pdf, id=1164, page=125, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 125>
+Package pdftex.def Info: framework.pdf , page125 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr124>
+<framework.pdf, id=1173, page=126, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 126>
+Package pdftex.def Info: framework.pdf , page126 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf> <a0,fr125>
+<framework.pdf, id=1182, page=127, pagebox=cropbox, 302.60251pt x 228.62614pt>
+File: framework.pdf Graphic file (type pdf)
+<use framework.pdf, page 127>
+Package pdftex.def Info: framework.pdf , page127 used on input line 11. on inpu
+t line 11.
+Package pdftex.def Info: Requested size: 302.60176pt x 228.62558pt on input lin
+e 11.
+ <./framework.pdf>
+<a0,fr126> [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] (./framework-animate.aux) ) 
+Here is how much of TeX's memory you used:
+ 20340 strings out of 492990
+ 392164 string characters out of 6132621
+ 510045 words of memory out of 5000000
+ 23701 multiletter control sequences out of 15000+600000
+ 530272 words of font info for 22 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,5n,61p,10421b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/lm/lmri7.pfb>
+Output written on framework-animate.pdf (1 page, 1102092 bytes).
+PDF statistics:
+ 1219 PDF objects out of 1440 (max. 8388607)
+ 666 compressed objects within 7 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 2989 words of extra memory for PDF output out of 10000 (max. 10000000)
+

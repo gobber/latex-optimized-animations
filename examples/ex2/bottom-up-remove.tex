@@ -1,0 +1,565 @@
+\documentclass[10pt]{article}
+
+\usepackage[brazil]{babel} 
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\usepackage{intcalc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{comment}
+\usepackage{multirow}		
+\usepackage{arydshln} 		
+\usepackage{amssymb}
+\usepackage{tikz,tikz-3dplot} 
+\usepackage{arrayjobx}	
+\usepackage{trimspaces}	
+\usepackage{xifthen}
+\usepackage[tightpage,active]{preview}
+
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{mindmap,trees,positioning,calc}	
+
+\newcommand{\volume}{\mathop{\ooalign{\hfil$V$\hfil\cr\kern0.08em--\hfil\cr}}\nolimits}
+
+\input{utils}
+
+\begin{document}
+
+\tikzstyle{hasseNode}=[draw, yshift=2cm, circle, inner sep=2pt, outer sep=0pt, node distance=0cm]	
+
+	\newarray\treeRoot
+	\readarray{treeRoot}{%
+		2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 0 & 0 & 0 & 0 & 0 & 0 & 2 &
+		2 & 2 & 2 & 2 & 2 & 2 & 2 & 2}
+
+	\newarray\treeNodeOne
+	\readarray{treeNodeOne}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 2 & 0 & 0 & 0 & 0 & 2 & 1 &
+		1 & 2 & 0 & 0 & 0 & 0 & 2 & 1 &
+		1 & 2 & 0 & 0 & 0 & 0 & 2 & 1 &
+		1 & 2 & 0 & 0 & 0 & 0 & 2 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+
+	\newarray\treeNodeTwo
+	\readarray{treeNodeTwo}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 2 & 2 & 2 & 2 & 1 & 1 &
+		1 & 1 & 2 & 0 & 0 & 2 & 1 & 1 &
+		1 & 1 & 2 & 0 & 0 & 2 & 1 & 1 &
+		1 & 1 & 2 & 2 & 2 & 2 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+
+	\newarray\treeNodeThree
+	\readarray{treeNodeThree}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 2 & 2 & 1 & 1 & 1 &
+		1 & 1 & 1 & 2 & 2 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+
+	\newarray\treeNodeOneMerge
+	\readarray{treeNodeOneMerge}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 2 & 2 & 0 & 0 & 2 & 2 & 1 &
+		1 & 2 & 2 & 0 & 0 & 2 & 2 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 2 & 2 & 2 & 2 & 2 & 2 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+
+	\newsavebox\treeRootCashTwo
+	\begin{lrbox}{\treeRootCashTwo}
+		\begin{tikzpicture}[scale=0.15]
+			\drawBinaryImage{8}{8}{treeRoot}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\treeNodeOneCashTwo
+	\begin{lrbox}{\treeNodeOneCashTwo}
+		\begin{tikzpicture}[scale=0.15]
+			\drawBinaryImage{8}{8}{treeNodeOne}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\treeNodeTwoCashTwo
+	\begin{lrbox}{\treeNodeTwoCashTwo}
+		\begin{tikzpicture}[scale=0.15]
+			\drawBinaryImage{8}{8}{treeNodeTwo}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\treeNodeThreeCashTwo
+	\begin{lrbox}{\treeNodeThreeCashTwo}
+		\begin{tikzpicture}[scale=0.15]
+			\drawBinaryImage{8}{8}{treeNodeThree}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\treeNodeOneMergeCash
+	\begin{lrbox}{\treeNodeOneMergeCash}
+		\begin{tikzpicture}[scale=0.15]
+			\drawBinaryImage{8}{8}{treeNodeOneMerge}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\def\N{4}
+			
+	\def\M{101}
+		 	
+	\tikzset{label position/.style={
+		 	    right= 0cm of #1, xshift=-0.3cm, yshift=0.7cm, font=\scriptsize
+	}}
+			
+	\tikzset{parameters position/.style={
+		 	    below= 0.05cm of #1, font=\tiny, align=center, text width=2cm
+	}}
+						
+	\tikzstyle{equation}=[font=\scriptsize, align=center, yshift=-1.1cm]
+			
+	% % %
+			
+	\tikzset{root shift/.style={
+				xshift= #1cm
+	}}
+			
+	% var global definitions %
+								
+	\xdef\rootXShift{-4}
+			
+	\xdef\nOneXShift{-1.5}
+			
+	\xdef\nTwoXShift{1}
+				
+	\xdef\nThreeXShift{3.5}
+
+	\xdef\blankcolorRoot{black}			
+			
+	\xdef\blankcolorNodeOne{black}			
+
+	\xdef\blankcolorNodeTwo{black}	
+
+	\xdef\blankcolorNodeThree{black}
+			
+	\xdef\boxNodeOne{\treeNodeOneCashTwo}
+			
+	\xdef\volRoot{140}
+			
+	\xdef\areaRoot{28}
+			
+	\xdef\contourRoot{32}	
+			
+	\xdef\volNodeOne{60}
+			
+	\xdef\areaNodeOne{20}
+			
+	\xdef\contourNodeOne{24}		
+
+	\xdef\volNodeTwo{12}
+			
+	\xdef\areaNodeTwo{12}
+			
+	\xdef\contourNodeTwo{16}
+			
+	\xdef\volNodeThree{28}
+			
+	\xdef\areaNodeThree{4}
+			
+	\xdef\contourNodeThree{8}		
+											
+	%
+			
+	\xdef\nodeFatherVol{\volNodeTwo}			
+			
+	\xdef\nodeChildVol{\volNodeThree}
+			
+	\xdef\nodeUnionVol{40}
+
+	\xdef\nodeFatherArea{\areaNodeTwo}			
+			
+	\xdef\nodeChildArea{\areaNodeThree}
+		
+	\xdef\nodeUnionArea{16}
+						
+	\xdef\nodeContour{\contourNodeThree}
+			
+	\xdef\blankcolorFather{black}
+			
+	\xdef\blankcolorChild{black}
+			
+	%
+			
+	\xdef\nodeComputing{3}
+			
+	\xdef\result{-92}
+			
+	\xdef\signal{<}	
+	
+	\PreviewEnvironment{tikzpicture}
+		
+	\xdef\i{1}
+	\whiledo{\i<\N}{%
+	\begin{tikzpicture}	
+		\useasboundingbox (-5.5 , -1.7) 
+							rectangle 
+							(5 , 3);			
+					
+					\node[hasseNode, xshift=-4cm](root){\usebox\treeRootCashTwo};
+					\node[label position=root]{$ \tau_0 $,{\color{red}$ \hat{\tau_0} $}};
+					
+					% tree %	
+					
+					\node[left = 0.05cm of root]{\scriptsize $ \mathcal{T}_i $};
+					
+			  		\node[hasseNode, xshift=-1.5cm] (n1) {\usebox\treeNodeOneCashTwo};
+					\node[label position= n1]{$ \tau_1 $,{\color{red}$ \hat{\tau_1} $}};				  						
+													  							  						
+				  	\node[hasseNode, xshift = 1cm] (n2) {\usebox\treeNodeTwoCashTwo};
+				  	\node[hasseNode, xshift = 3.5cm] (n3) {\usebox\treeNodeThreeCashTwo};
+				  		
+				  	\node[label position= n2]{$ \tau_2 $,{\color{red}$ \hat{\tau_2} $}};
+				  	\node[label position= n3]{$ \tau_3 $,{\color{red}$ \hat{\tau_2} $}};
+									  			
+			  		\draw[] (root) -- (n1)
+					  		(n1) -- (n2)
+					  		(n2) -- (n3);
+
+			  		\ifthenelse{\i>1}
+			  			{
+							\draw[green!60, -latex] ($(n3.west)-(0,0.1)$) -- ($(n2.east)-(0,0.1)$);
+			  			}
+			  			{}
+			  			
+			  		\ifthenelse{\i>2}
+			  			{
+							\draw[green!60, -latex] ($(n2.west)-(0,0.1)$) -- ($(n1.east)-(0,0.1)$);
+			  			}
+			  			{}
+
+			  		\ifthenelse{\i>3}
+			  			{
+							\draw[green!60, -latex] ($(n1.west)-(0,0.1)$) -- ($(root.east)-(0,0.1)$);
+			  			}
+			  			{}
+			  	
+			  		\node[parameters position=root]{\baselineskip=7pt\vspace{-15pt}
+			  		\begin{align*}\volume(\hat{\tau_0})&=140 \\ |\hat{\tau_0}|&=28 \\ |\partial \hat{\tau_0}|&=32 \end{align*} \par};
+			  		
+			  		\node[parameters position=n1]{\baselineskip=7pt\vspace{-15pt}
+			  		\begin{align*}\volume(\hat{\tau_1})&=60 \\ |\hat{\tau_1}|&=20 \\ |\partial \hat{\tau_1}|&=24 \end{align*} \par};
+
+			  		\node[parameters position=n2]{\baselineskip=7pt\vspace{-15pt}
+			  		\begin{align*}\volume(\hat{\tau_2})&=12 \\ |\hat{\tau_2}|&=12 \\ |\partial \hat{\tau_2}|&=16 \end{align*} \par};
+
+			  		\node[parameters position=n3]{\baselineskip=7pt\vspace{-15pt}
+			  		\begin{align*}\volume(\hat{\tau_3})&=28 \\ |\hat{\tau_3}|&=4 \\ |\partial \hat{\tau_3}|&=8 \end{align*} \par};
+			  		
+			  		\node[equation]{$ \Delta E(\mathcal{T}_i, \tau)=\dfrac{[\volume(\hat{\tau}'')]^2}{|\hat{\tau}''|} - \dfrac{[\volume(\hat{\tau})]^2}{|\hat{\tau}|} - \dfrac{[\volume(\hat{\tau}')]^2}{|\hat{\tau}'|} + \nu \times ( |\partial \hat{\tau}| + |\partial \hat{\tau}'| - |\partial \hat{\tau}''| ) $};
+
+	\end{tikzpicture}
+	  \pgfmathtruncatemacro{\temp}{\i+1}%
+	  \xdef\i{\temp}%
+	  %\end{center}%
+	  \newpage%
+	}
+	
+	\xdef\i{1}
+	\whiledo{\i<\M}{%
+	\begin{tikzpicture}	
+		\useasboundingbox (-5.5 , -1.7) 
+							rectangle 
+							(5 , 3);
+			  		
+			  		\pgfmathtruncatemacro{\div}{\intcalcMod{\i}{2}}
+					
+					\ifthenelse{\i>22 \AND \i<47}
+						{
+			  				% compute between node 1 and 2
+			  				
+							\xdef\nodeUnionVol{72}
+							\xdef\nodeUnionArea{32}							
+							\xdef\nodeContour{\contourNodeTwo}		
+							
+							\xdef\nodeFatherArea{\areaNodeOne}						
+							\xdef\nodeFatherVol{\volNodeOne}							
+							
+							\xdef\nodeChildArea{\areaNodeTwo}						
+							\xdef\nodeChildVol{\volNodeTwo}
+								
+							\xdef\nodeComputing{2}							
+							\xdef\result{2}	
+							\xdef\signal{>}	
+							
+						}
+						{}
+						
+					\ifthenelse{\i>46} % merge nodes
+						{
+			  				\xdef\volNodeOne{72}
+			  				\xdef\areaNodeOne{32}
+			  				\xdef\boxNodeOne{\treeNodeOneMergeCash}						
+						}
+						{}
+
+					\ifthenelse{\i>51 \AND \i<76}
+						{
+			  				% compute between node 1 and node 3
+			  				
+							\xdef\nodeUnionVol{100}
+							\xdef\nodeUnionArea{36}							
+							\xdef\nodeContour{\contourNodeThree}		
+							
+							\xdef\nodeFatherArea{\areaNodeOne}						
+							\xdef\nodeFatherVol{\volNodeOne}							
+							
+							\xdef\nodeChildArea{\areaNodeThree}						
+							\xdef\nodeChildVol{\volNodeThree}
+								
+							\xdef\nodeComputing{3}							
+							\xdef\result{-64.22}	
+							\xdef\signal{<}					
+						}
+						{}
+					
+					\ifthenelse{\i>75 \AND \i<100}
+						{
+			  				% compute between root and node 1
+			  				
+							\xdef\nodeUnionVol{212}
+							\xdef\nodeUnionArea{60}							
+							\xdef\nodeContour{\contourNodeOne}		
+							
+							\xdef\nodeFatherArea{\areaRoot}						
+							\xdef\nodeFatherVol{\volRoot}							
+							
+							\xdef\nodeChildArea{\areaNodeOne}						
+							\xdef\nodeChildVol{\volNodeOne}
+								
+							\xdef\nodeComputing{1}							
+							\xdef\result{-64.93}	
+							\xdef\signal{<}					
+						}
+						{}					
+						  	
+					% odd and even validation to blanck effect
+					
+					\ifthenelse{\div=1}
+						{									
+							
+							\ifthenelse{\i<23} % node 2 and 3
+								{
+									\xdef\blankcolorNodeTwo{purple}
+									\xdef\blankcolorNodeThree{blue}										
+								}
+								{}							
+							
+							\ifthenelse{\i>22 \AND \i<47} % node 1 and 2
+								{
+									\xdef\blankcolorNodeOne{purple}									
+									\xdef\blankcolorNodeTwo{blue}
+								}
+								{}
+						
+							\ifthenelse{\i>46 \AND \i<49} % removing
+								{
+									\xdef\blankcolorNodeOne{black}					
+								}
+								{}
+							
+							\ifthenelse{\i>48 \AND \i<52} % updating
+								{
+									\xdef\blankcolorNodeOne{green}						
+								}
+								{}	
+														
+							\ifthenelse{\i>51 \AND \i<76} % node 1 and 3
+								{
+									\xdef\blankcolorNodeOne{purple}									
+									\xdef\blankcolorNodeThree{blue}							
+								}
+								{}
+								
+							\ifthenelse{\i>75 \AND \i<100} % root and node 1
+								{
+									\xdef\blankcolorRoot{purple}									
+									\xdef\blankcolorNodeOne{blue}							
+								}
+								{}
+								
+							\xdef\blankcolorFather{purple}
+							\xdef\blankcolorChild{blue}
+						}
+						{
+							\xdef\blankcolorRoot{black}						
+							\xdef\blankcolorNodeOne{black}	
+							\xdef\blankcolorNodeTwo{black}		
+							\xdef\blankcolorNodeThree{black}	
+							\xdef\blankcolorFather{black}														
+							\xdef\blankcolorChild{black}							
+						}				
+								  															  							  	
+			  		% root
+			  				
+					\node[hasseNode, draw=\blankcolorRoot, root shift=\rootXShift](root){\usebox\treeRootCashTwo};
+					
+					\node[parameters position=root, text=\blankcolorRoot]{\baselineskip=7pt\vspace{-15pt}
+					\begin{align*}\volume(\hat{\tau_0})&=\volRoot \\ |\hat{\tau_0}|&=\areaRoot \\ |\partial \hat{\tau_0}|&=\contourRoot \end{align*} \par};											
+							
+					\node[label position= root]{$ \tau_0 $,{\color{red}$ \hat{\tau_0} $}};			  								
+							
+					% node one
+											
+					\node[hasseNode, draw=\blankcolorNodeOne, root shift=\nOneXShift] (n1) {\usebox\boxNodeOne};
+					\node[label position= n1]{$ \tau_1 $,{\color{red}$ \hat{\tau_1} $}};					  	
+					  		
+					\node[parameters position=n1, text=\blankcolorNodeOne]{\baselineskip=7pt\vspace{-15pt}
+					\begin{align*}\volume(\hat{\tau_1})&=\volNodeOne \\ |\hat{\tau_1}|&=\areaNodeOne \\ |\partial \hat{\tau_1}|&=\contourNodeOne \end{align*} \par};
+			  			
+					% tree label %	
+					
+					\ifthenelse{\i<100}
+						{\node[left = 0.05cm of root]{\scriptsize $ \mathcal{T}_i $};}
+						{\node[left = 0.05cm of root]{\scriptsize $ \mathcal{T}^* $};}
+						
+					% node 2 %			  			
+					
+				  	\ifthenelse{\i<47}
+				  	{
+				  							
+						\node[hasseNode, draw=\blankcolorNodeTwo, root shift=\nTwoXShift] (n2) {\usebox\treeNodeTwoCashTwo};
+					
+						\node[parameters position=n2, text=\blankcolorNodeTwo]{\baselineskip=7pt\vspace{-15pt}
+						\begin{align*}\volume(\hat{\tau_2})&=12 \\ |\hat{\tau_2}|&=12 \\ |\partial \hat{\tau_2}|&=16 \end{align*} \par};						  																
+							
+						\node[label position= n2]{$ \tau_2 $,{\color{red}$ \hat{\tau_2} $}};
+					
+					}{}
+						
+					% node 3					
+				  
+					\node[hasseNode, draw=\blankcolorNodeThree, root shift=\nThreeXShift] (n3) {\usebox\treeNodeThreeCashTwo};
+				  		
+					\node[parameters position=n3, text=\blankcolorNodeThree]{\baselineskip=7pt\vspace{-15pt}
+					\begin{align*}\volume(\hat{\tau_3})&=28 \\ |\hat{\tau_3}|&=4 \\ |\partial \hat{\tau_3}|&=8 \end{align*} \par};				  						  						  		
+
+				  	\node[label position= n3]{$ \tau_3 $,{\color{red}$ \hat{\tau_3} $}};
+				  		
+				  	% draw connections
+						
+					\ifthenelse{\i<47}
+						{ 
+							\draw[] (n1) -- (n2)
+									(n2) -- (n3); 
+									  	
+							\draw[green!60, -latex] ($(n2.west)-(0,0.1)$) edge ($(n1.east)-(0,0.1)$)
+													($(n3.west)-(0,0.1)$) -- ($(n2.east)-(0,0.1)$);
+						}
+						{}
+															  								
+					\ifthenelse{\i>46}
+						{
+							\draw[] (n1)--(n3); 
+										  	
+							\draw[green!60, -latex] ($(n3.west)-(0,0.1)$) -- ($(n1.east)-(0,0.1)$);						
+						}
+						{}						
+							
+					\draw[] (root)--(n1);
+									  				
+			  		\draw[green!60, -latex] ($(n1.west)-(0,0.1)$) -- ($(root.east)-(0,0.1)$);
+			  			
+			  		% equations
+			  		
+			  		% 7
+			  		
+			  		\ifthenelse{\i<7 \OR {\i>22 \AND \i<30} \OR {\i>51 \AND \i<59} \OR {\i>75 \AND \i<83}}
+			  			{	
+			  				\node[equation]{$ \Delta E(\mathcal{T}, \tau_{\nodeComputing})=\dfrac{\nodeUnionVol^2}{\nodeUnionArea}-\textcolor{\blankcolorChild}{\dfrac{\nodeChildVol^2}{\nodeChildArea}}-\textcolor{\blankcolorFather}{\dfrac{\nodeFatherVol^2}{\nodeFatherArea}}+2 \times \nodeContour $};			  				
+			  			}
+			  			{}			  			
+			  	
+			  		% 7
+			  	
+			  		\ifthenelse{\i>6 \AND \i<14 \OR {\i>29 \AND \i<37} \OR {\i>58 \AND \i<66} \OR {\i>82 \AND \i<90}}
+			  			{
+			  				\node[equation]{$ \Delta E(\mathcal{T}, \tau_{\nodeComputing})=\result$};		  							  				
+			  			}
+			  			{}
+			  			
+			  		% 7
+			  			
+			  		\ifthenelse{\i>13 \AND \i<21 \OR {\i>36 \AND \i<47} \OR {\i>65 \AND \i<73} \OR {\i>89 \AND \i<97}}
+			  			{
+			  				\node[equation]{$ \Delta E(\mathcal{T}, \tau_{\nodeComputing})=\result$, $ \Delta E(\mathcal{T}, \tau_{\nodeComputing})\signal0 $};
+			  			}
+			  			{}			  					  	
+			  			
+			  		% node 2	
+			  		
+			  		% 3
+			  		
+			  		\ifthenelse{\i>20 \AND \i<23 \OR {\i>72 \AND \i<76} \OR {\i>96 \AND \i<100}} % not removing
+			  			{	
+			  				\node[equation]{Não remove $ \tau_{\nodeComputing}$};
+			  			}
+			  			{}				  						  										  					  			
+
+					\ifthenelse{\i>46 \AND \i<50} % removing
+			  			{	
+			  				\node[equation]{Removendo $ \tau_2 $};		  							  						  				
+			  			}
+			  			{}
+					
+			  		\ifthenelse{\i>49 \AND \i<52} % updating
+			  			{				  			
+			  				\node[equation]{Atualizando $ \tau_1 $};	  							  						  				
+			  			}
+			  			{}				
+
+					% end
+
+			  		\ifthenelse{\i>99}
+			  			{	
+			  				\node[equation]{Fim do exemplo};
+			  			}
+			  			{}
+								
+					% removing node two and moving other nodes
+					
+					\ifthenelse{\i>46 \AND \i<52}			  						  		
+						{							
+							\pgfmathsetmacro{\temp}{\rootXShift +0.25}
+							\xdef\rootXShift{\temp}													
+						
+							\pgfmathsetmacro{\temp}{\nOneXShift +0.25}
+							\xdef\nOneXShift{\temp}
+							
+							\pgfmathsetmacro{\temp}{\nThreeXShift -0.25}
+							\xdef\nThreeXShift{\temp}
+						}
+						{}
+
+	\end{tikzpicture}
+	  \pgfmathtruncatemacro{\temp}{\i+1}%
+	  \xdef\i{\temp}%
+	  %\end{center}%
+	  \newpage%
+	}	
+\end{document}

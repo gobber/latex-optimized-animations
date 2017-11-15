@@ -1,0 +1,202 @@
+# Animações otimizadas em LaTeX
+
+Este projeto fornece uma abordagem para construir animações otimizadas em LaTeX por meio do pacote *animate*. A ideia surgiu a partir de uma questão do [LaTeX Stack Exchange](https://tex.stackexchange.com/questions/39001/tikz-externalize-pgfplots-and-animate).
+
+# Requisitos
+
+Para o pacote *animate* funcionar é necessário utilizar algum leitor de PDFs da adobe:
+
+```
+# funciona bem
+Adobe Reader XI
+
+# funciona muito melhor
+Adobe Reader DC
+```
+
+Para os outros leitores PDFs que não suportam o pacote *animate* existe a opção *poster* suportada pelo pacote. Esta opção deixa visível algum dos frames da animação e assim caso não seja suportado o pacote, o usuário vai encontrar apenas uma imagem estática.
+
+# Sobre o pacote *animate*
+
+Basicamente o pacote *animate* fornece dois comandos LaTeX para construir as animações. Como queremos contruir de forma otimizada, optamos por gerar todos os frames em um PDF (sera discutido abaixo) e então incluir pelo comando **\animategraphics**.
+
+```
+% o parâmetro [controls] inclui um controle no rodapé da animação
+\animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}	
+```
+
+Para informações detalhadas do pacote *animate* consulte o manual [animate package](http://ctan.unsw.edu.au/macros/latex/contrib/animate/animate.pdf).
+
+# Gerando os frames da animação de forma otimizada
+
+Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos os frames (neste caso utilizando o pacote *tikz*) e contruir a animação com o comando **\animategraphics**. Assim, fornecemos neste projeto um arquivo [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) com um código mínimo para gerar os frames. Fornecemos também [exemplos](https://github.com/gobber/blob/master/examples/) com uso dessa abordagem, em cada exemplo disponível na pasta [exemplos](https://github.com/gobber/blob/master/examples/) também está disponível um arquivo com o sufixo **-animate.tex** contendo as chamadas para gerar a animação com o comando **\animategraphics**.
+
+## Arquivo main.tex
+
+Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations) são dados abaixo.
+
+### Classe base
+
+Utilizamos a classe base *article*, poderiam ser outras, mas com o conteúdo disponível na internet ficou mais fácil utilizar esta.
+
+```
+% classe base
+\documentclass[10pt]{article}
+```
+
+### Pacotes necessários
+
+Como estamos interessados em construir frames a partir de figuras vetorizadas, o mínimo que precisamos é dos dois pacotes seguintes:
+```
+% pacote para construir figuras vetorizadas
+\usepackage{tikz}
+% pacote com o comando de laço \whiledo
+\usepackage{ifthen}
+```
+
+### Extraindo um *environment* como figura
+
+Cada figura tikz gerada no loop vai ser uma página (frame) no PDF da animação. Assim, queremos imprimir nas páginas o *environment* *tikzpicture*, fazemos isso incluindo a chamada do comando **\PreviewEnvironment**.
+
+```
+% vamos gerar animações utilizando tikzpicture
+\PreviewEnvironment{tikzpicture}
+```
+
+### Loop para gerar os frames
+
+Para gerar os frames precisamos determinar o número máximo de frames, fazemos isso com uma variável criada via **\def**.
+
+```
+% 100 frames ou 100 figuras
+\def\Frames{100}
+```
+
+Para incrementar o contador do loop existem várias formas. Escolhemos aqui utilizar uma variável via **\xdef**. Basicamente o **\xdef** cria uma variável em contexto global, isso é necessário porque queremos alterar a variável em cada passo do loop.
+
+```
+% define um contador para o loop
+\xdef\i{0}
+```
+
+O loop funciona via **\whiledo**. Dentro do loop nós fazemos a chamada do *environment* **tikzpicture** e adicionamos alguns outros códigos dentro do *environment*:
+
+```
+% variáveis para controlar o bounding box de cada página
+\def\xI{-1} \def\xF{1} \def\yI{-1} \def\yF{1}
+
+% o comando useasboundingbox gera o espaço para criar as animações. Ele não é necessário, porém, sem ele os frames ficam com tamanhos diferentes (dependendo de como são construidos).
+\useasboundingbox (\xI , \yI) rectangle (\xF , \yF);
+
+conteúdo que eu vou gerar...
+```
+
+Finalmente, após fechar o *environment* **tikzpicture** adicionamos os passos do *loop* **\whiledo**: 
+
+* Computar o novo valor do contador **\i** usando uma variável temporaria **\temp** via comando **\pgfmathtruncatemacro**. 
+* Atualizar **\i** via **\xdef** (contexto global).
+* Criar uma nova página com o comando **\newpage**.
+
+```
+% computar o novo valor do contador utilizando uma variável temporária
+\pgfmathtruncatemacro{\temp}{\i+1}%
+% atualiza o contador
+\xdef\i{\temp}%
+% cria uma nova página
+\newpage% 
+```
+
+### Colocando tudo junto
+
+Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber/blob/master/latex-optimized-animations).
+
+```
+
+\documentclass[10pt]{article}
+
+\usepackage{tikz}
+\usepackage{ifthen}
+% pacotes adicionais ...
+
+\usepackage[tightpage,active]{preview}
+
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+
+\def\Frames{100}
+
+\xdef\i{0}
+\whiledo{\i<\Frames}{%
+   \begin{tikzpicture}
+		
+      \def\xI{-1} \def\xF{1} \def\yI{-1} \def\yF{1}
+		
+      \useasboundingbox (\xI , \yI) rectangle (\xF , \yF);
+
+      % coloque o conteúdo aqui (frame a frame)
+	
+   \end{tikzpicture}
+   \pgfmathtruncatemacro{\temp}{\i+1}%
+   \xdef\i{\temp}%
+   \newpage%
+}
+\end{document}
+```
+
+# Outros
+
+## Criando as animações
+
+As animações podem ser incluidas dentro do **article**, **book** e **beamer**. São fornecidos nos [exemplos](https://github.com/gobber/blob/master/examples/) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
+
+```
+% classe "shell" do LaTeX
+\documentclass[]{standalone}
+
+% pacotes
+\usepackage{pst-func}
+\usepackage{animate}
+\usepackage{graphicx}
+
+\begin{document}
+	
+  \animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}	
+	
+\end{document}
+```
+
+Para chamar a animação dentro do **beamer** é necessário utilizar a opção *fragile*:
+
+```
+\documentclass{beamer}
+
+% código omitido
+
+% pacotes
+\usepackage{animate}
+\usepackage{graphicx}
+
+% código omitido
+
+% colocando animate dentro do beamer
+\begin{frame}[fragile]{Exemplo do uso do pacote animate}
+  \animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}
+\end{frame}
+
+% código omitido
+```
+## Extras
+
+Dentro de cada exemplo disponível na pasta [exemplos](https://github.com/gobber/blob/master/examples/) é fornecido um arquivo de *shell* linux **clean.sh** para excluir arquivos temporários gerados pelo LaTeX que muitas vezes atrapalham o desenvolvimento:
+
+```
+# chamar o arquivo pelo terminal
+sh ./clean.sh
+```
+
+# Autor
+
+Podem me enviar um e-mail se houver alguma dúvida.
+
+* **Charles Gobber** - charles26f@gmail.com

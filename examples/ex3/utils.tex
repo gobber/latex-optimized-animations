@@ -1,0 +1,168 @@
+	\tikzstyle{hasseNode}=[draw, circle, inner sep=2pt, outer sep=0pt, node distance=0cm]	
+	
+	\tikzstyle{pixelBother}=[green!30]	
+	
+	\makeatletter
+		\def\trimspace#1{\trim@spaces@in{#1}}
+	\makeatother
+
+	\newcommand{\drawBinaryImage}[3]{%
+	   
+	    \pgfmathtruncatemacro{\gridwidth}{#1}
+	    \pgfmathtruncatemacro{\gridheight}{#2}
+	    \dataheight=\gridwidth
+	    
+	    \draw[gray,densely dashed] (0,0) grid (\gridwidth,\gridheight);
+	    
+	    \foreach \x in {1,...,\gridwidth}{% 
+	    	\foreach \y in {1,...,\gridheight}{%
+	    	   
+	            \pgfmathtruncatemacro{\colnum}{\x}
+	            \pgfmathtruncatemacro{\rownum}{\gridheight+1-\y}
+	            \expandafter\csname check#3\endcsname(\rownum,\colnum)\trimspace\cachedata
+	            
+	            \ifthenelse{\cachedata=0}
+	            	{\fill[black,fill opacity=1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);}
+	            	{}
+	            	
+				\ifthenelse{\cachedata=1}
+	            	{\fill[white,fill opacity=1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);}
+	            	{}
+	            	
+				\ifthenelse{\cachedata=2}
+	            	{\fill[red,fill opacity=1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);}
+	            	{}	       
+	            	
+	            % for other purposes
+	            	
+				\ifthenelse{\cachedata=3}
+	            	{\fill[pixelBother,fill opacity=1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);}
+	            	{}	
+	            
+	     	}
+	    }
+	    
+	}
+	
+	% draw a gray image
+	
+	\tikzstyle{textTreeLight}=[font=\fontsize{4pt}{2pt}\selectfont, text=white]
+
+	\tikzstyle{textTreeDark}=[font=\fontsize{4pt}{2pt}\selectfont, text=black!80]
+	
+	\tikzstyle{textTreeOther}=[font=\fontsize{4pt}{2pt}\selectfont, text=orange]
+	
+	\tikzstyle{pixelTreeOther}=[green!30]
+	
+	\newcommand{\drawGrayImage}[3]{%
+	   
+		\pgfmathtruncatemacro{\gridwidth}{#1}
+		\pgfmathtruncatemacro{\gridheight}{#2}
+		\dataheight=\gridwidth
+	
+		\draw[gray,densely dashed] (0,0) grid (\gridwidth,\gridheight);
+		\foreach \x in {1,...,\gridwidth}{% 
+			\foreach \y in {1,...,\gridheight}{%
+			   
+				\pgfmathtruncatemacro{\colnum}{\x}
+				\pgfmathtruncatemacro{\rownum}{\gridheight+1-\y}
+				\expandafter\csname check#3\endcsname(\rownum,\colnum)\trimspace\cachedata
+			
+				\ifthenelse{\cachedata=0}
+				{
+					\fill[black,fill opacity=1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeLight, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$}; 
+				}
+				{}
+			
+				\ifthenelse{\cachedata=1}
+				{
+					\fill[black,fill opacity=0.85] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeLight, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};
+				}
+				{}
+			
+				\ifthenelse{\cachedata=2}
+				{
+					\fill[black,fill opacity=0.7] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeLight, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};
+				}
+				{}
+			
+				\ifthenelse{\cachedata=3}
+				{
+					\fill[black,fill opacity=0.55] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeLight, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};
+				}
+				{}
+			
+				\ifthenelse{\cachedata=4}
+				{
+					\fill[black,fill opacity=0.25] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);     
+					\draw[textTreeDark, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};   
+				}
+				{}
+			
+				\ifthenelse{\cachedata=5}
+				{
+					\fill[black,fill opacity=0.2] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeDark, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};   
+				}
+				{}
+			
+				\ifthenelse{\cachedata=6}
+				{
+					\fill[black,fill opacity=0.1] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeDark, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};   
+				}
+				{}
+			
+				\ifthenelse{\cachedata=7}
+				{
+					\fill[black,fill opacity=0] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);        
+					\draw[textTreeDark, fill opacity=1] (\x-0.5,\y-0.5)  node[] {$\cachedata$};   
+				}
+				{}				
+				
+				% for other purposes
+
+				\ifthenelse{\cachedata=90}
+				{
+					\fill[pixelTreeOther] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);
+					\draw[textTreeOther] (\x-0.5,\y-0.5)  node[] {$0$}; 					
+				}
+				{}				
+
+				\ifthenelse{\cachedata=91}
+				{
+					\fill[pixelTreeOther] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);
+					\draw[textTreeOther] (\x-0.5,\y-0.5)  node[] {$1$}; 					
+				}
+				{}				
+
+				\ifthenelse{\cachedata=93}
+				{
+					\fill[pixelTreeOther] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);
+					\draw[textTreeOther] (\x-0.5,\y-0.5)  node[] {$3$}; 					
+				}
+				{}				
+				
+				\ifthenelse{\cachedata=95}
+				{
+					\fill[pixelTreeOther] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);
+					\draw[textTreeOther] (\x-0.5,\y-0.5)  node[] {$5$}; 					
+				}
+				{}								
+				
+				\ifthenelse{\cachedata=97}
+				{
+					\fill[pixelTreeOther] (\x-0.9,\y-0.9) rectangle (\x-0.1,\y-0.1);
+					\draw[textTreeOther] (\x-0.5,\y-0.5)  node[] {$7$}; 					
+				}
+				{}
+															
+			}
+		}
+	}	
+		
+%

@@ -1,0 +1,721 @@
+\documentclass[10 pt]{article}
+
+\usepackage[brazil]{babel} 
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\usepackage{intcalc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{comment}
+\usepackage{multirow}			% For multi row cells in table
+\usepackage{arydshln} 			% For dashed lines in arrays and tables
+\usepackage{amssymb}
+\usepackage{tikz,tikz-3dplot} % tikz 
+\usepackage{arrayjobx}		% for grid drawing Tim Bombadil snippet
+\usepackage{trimspaces}		% for grid drawing Tim Bombadil snippet
+\usepackage{xifthen}
+\usepackage[tightpage,active]{preview}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{mindmap,trees,positioning,calc}	% For mind map
+
+% utils
+
+\input{utils}
+
+\begin{document}
+	
+\tikzstyle{textTreeOther}=[font=\fontsize{4pt}{2pt}\selectfont, text=orange]
+	
+	\tikzstyle{pixelTreeOther}=[green!30]
+	
+	\tikzstyle{pixelBother}=[green!30]	
+
+	\newarray\InputImage
+	\readarray{InputImage}{%
+		5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 &
+		5 & 3 & 3 & 3 & 3 & 3 & 3 & 5 &
+		5 & 3 & 1 & 1 & 1 & 1 & 3 & 5 &
+		5 & 3 & 1 & 7 & 7 & 1 & 3 & 5 &
+		5 & 3 & 1 & 7 & 7 & 1 & 3 & 5 &
+		5 & 3 & 1 & 1 & 1 & 1 & 3 & 5 &
+		5 & 3 & 3 & 3 & 3 & 3 & 3 & 5 &
+		5 & 5 & 5 & 5 & 5 & 5 & 5 & 5}
+
+	\newarray\InputImageUone
+	\readarray{InputImageUone}{%
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 91 & 97 & 97 & 91 & 93 & 95 &
+		95 & 93 & 91 & 97 & 97 & 91 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95}
+		
+	\newarray\InputImageUtwo
+	\readarray{InputImageUtwo}{%
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 93 &  1 &  1 &  1 &  1 & 93 & 95 &
+		95 & 93 &  1 & 97 & 97 &  1 & 93 & 95 &
+		95 & 93 &  1 & 97 & 97 &  1 & 93 & 95 &
+		95 & 93 &  1 &  1 &  1 &  1 & 93 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95}
+
+	\newarray\InputImageUthree
+	\readarray{InputImageUthree}{%
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95 &
+		95 &  3 &  3 &  3 &  3 &  3 &  3 & 95 &
+		95 &  3 &  1 &  1 &  1 &  1 &  3 & 95 &
+		95 &  3 &  1 & 97 & 97 &  1 &  3 & 95 &
+		95 &  3 &  1 & 97 & 97 &  1 &  3 & 95 &
+		95 &  3 &  1 &  1 &  1 &  1 &  3 & 95 &
+		95 &  3 &  3 &  3 &  3 &  3 &  3 & 95 &
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95}
+		
+	\newarray\InputImageUfour
+	\readarray{InputImageUfour}{%
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5 &
+		 5 &  3 &  3 &  3 &  3 &  3 &  3 &  5 &
+		 5 &  3 &  1 &  1 &  1 &  1 &  3 &  5 &
+		 5 &  3 &  1 & 97 & 97 &  1 &  3 &  5 &
+		 5 &  3 &  1 & 97 & 97 &  1 &  3 &  5 &
+		 5 &  3 &  1 &  1 &  1 &  1 &  3 &  5 &
+		 5 &  3 &  3 &  3 &  3 &  3 &  3 &  5 &
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5}
+				
+	% upper 1
+		
+	\newarray\UpperOne
+	\readarray{UpperOne}{%
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0}
+		
+	\newarray\UpperOneGreen
+	\readarray{UpperOneGreen}{%
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3}		
+		
+	% upper 2
+
+	\newarray\UpperTwo
+	\readarray{UpperTwo}{%
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 &
+		0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 &
+		0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 &
+		0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0}
+	
+	\newarray\UpperTwoGreen
+	\readarray{UpperTwoGreen}{%
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 1 & 1 & 1 & 1 & 3 & 3 &
+		3 & 3 & 1 & 3 & 3 & 1 & 3 & 3 &
+		3 & 3 & 1 & 3 & 3 & 1 & 3 & 3 &
+		3 & 3 & 1 & 1 & 1 & 1 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3}
+			
+	% upper 3
+	
+	\newarray\UpperThree
+	\readarray{UpperThree}{%
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 &
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 &
+		0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 &
+		0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 &
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 &
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0}
+
+	\newarray\UpperThreeGreen
+	\readarray{UpperThreeGreen}{%
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 1 & 1 & 1 & 1 & 1 & 1 & 3 &
+		3 & 1 & 1 & 1 & 1 & 1 & 1 & 3 &
+		3 & 1 & 1 & 3 & 3 & 1 & 1 & 3 &
+		3 & 1 & 1 & 3 & 3 & 1 & 1 & 3 &
+		3 & 1 & 1 & 1 & 1 & 1 & 1 & 3 &
+		3 & 1 & 1 & 1 & 1 & 1 & 1 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3}
+		
+	% upper 4
+	
+	\newarray\UpperFour
+	\readarray{UpperFour}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 &
+		1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+
+	\newarray\UpperFourGreen
+	\readarray{UpperFourGreen}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 3 & 3 & 1 & 1 & 1 &
+		1 & 1 & 1 & 3 & 3 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+	
+	% cashed images	
+	
+	\newsavebox\InputImageCash
+	\begin{lrbox}{\InputImageCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImage}
+		\end{tikzpicture}
+	\end{lrbox}		
+
+	\newsavebox\InputImageUoneCash
+	\begin{lrbox}{\InputImageUoneCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageUone}
+		\end{tikzpicture}
+	\end{lrbox}	
+
+	\newsavebox\InputImageUtwoCash
+	\begin{lrbox}{\InputImageUtwoCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageUtwo}
+		\end{tikzpicture}
+	\end{lrbox}			
+
+	\newsavebox\InputImageUthreeCash
+	\begin{lrbox}{\InputImageUthreeCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageUthree}
+		\end{tikzpicture}
+	\end{lrbox}	
+
+	\newsavebox\InputImageUfourCash
+	\begin{lrbox}{\InputImageUfourCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageUfour}
+		\end{tikzpicture}
+	\end{lrbox}	
+
+	% cashed tree
+
+	\newsavebox\UpperOneCash
+	\begin{lrbox}{\UpperOneCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperOne}
+		\end{tikzpicture}
+	\end{lrbox}	
+
+	\newsavebox\UpperOneGreenCash
+	\begin{lrbox}{\UpperOneGreenCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperOneGreen}
+		\end{tikzpicture}
+	\end{lrbox}	
+
+	\newsavebox\UpperTwoCash
+	\begin{lrbox}{\UpperTwoCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperTwo}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\UpperTwoGreenCash
+	\begin{lrbox}{\UpperTwoGreenCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperTwoGreen}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\UpperThreeCash
+	\begin{lrbox}{\UpperThreeCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperThree}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\UpperThreeGreenCash
+	\begin{lrbox}{\UpperThreeGreenCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperThreeGreen}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\UpperFourCash
+	\begin{lrbox}{\UpperFourCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperFour}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\UpperFourGreenCash
+	\begin{lrbox}{\UpperFourGreenCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{UpperFourGreen}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	% lower sets and more
+	
+	\tikzstyle{textTreeOther}=[font=\fontsize{4pt}{2pt}\selectfont, text=yellow]
+		
+	\tikzstyle{pixelTreeOther}=[purple]
+	
+	\tikzstyle{pixelBother}=[purple]		
+	
+	% images
+	
+	\newarray\InputImageLone
+	\readarray{InputImageLone}{%
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 91 & 97 & 97 & 91 & 93 & 95 &
+		95 & 93 & 91 & 97 & 97 & 91 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95}
+
+	\newarray\InputImageLtwo
+	\readarray{InputImageLtwo}{%
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 91 &  7 &  7 & 91 & 93 & 95 &
+		95 & 93 & 91 &  7 &  7 & 91 & 93 & 95 &
+		95 & 93 & 91 & 91 & 91 & 91 & 93 & 95 &
+		95 & 93 & 93 & 93 & 93 & 93 & 93 & 95 &
+		95 & 95 & 95 & 95 & 95 & 95 & 95 & 95}
+		
+	\newarray\InputImageLthree
+	\readarray{InputImageLthree}{%
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5 &
+		 5 & 93 & 93 & 93 & 93 & 93 & 93 &  5 &
+		 5 & 93 & 91 & 91 & 91 & 91 & 93 &  5 &
+		 5 & 93 & 91 &  7 &  7 & 91 & 93 &  5 &
+		 5 & 93 & 91 &  7 &  7 & 91 & 93 &  5 &
+		 5 & 93 & 91 & 91 & 91 & 91 & 93 &  5 &
+		 5 & 93 & 93 & 93 & 93 & 93 & 93 &  5 &
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5}
+		 
+	\newarray\InputImageLfour
+	\readarray{InputImageLfour}{%
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5 &
+		 5 &  3 &  3 &  3 &  3 &  3 &  3 &  5 &
+		 5 &  3 & 91 & 91 & 91 & 91 &  3 &  5 &
+		 5 &  3 & 91 &  7 &  7 & 91 &  3 &  5 &
+		 5 &  3 & 91 &  7 &  7 & 91 &  3 &  5 &
+		 5 &  3 & 91 & 91 & 91 & 91 &  3 &  5 &
+		 5 &  3 &  3 &  3 &  3 &  3 &  3 &  5 &
+		 5 &  5 &  5 &  5 &  5 &  5 &  5 &  5}
+	
+	% image lower cashed
+	
+	\newsavebox\InputImageLoneCash
+	\begin{lrbox}{\InputImageLoneCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageLone}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\InputImageLtwoCash
+	\begin{lrbox}{\InputImageLtwoCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageLtwo}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\InputImageLthreeCash
+	\begin{lrbox}{\InputImageLthreeCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageLthree}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\InputImageLfourCash
+	\begin{lrbox}{\InputImageLfourCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawGrayImage{8}{8}{InputImageLfour}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	% lower sets
+	
+	\newarray\LowerOnePurple
+	\readarray{LowerOnePurple}{%
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3}	
+	
+	\newarray\LowerTwo
+	\readarray{LowerTwo}{%
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 &
+		0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0}
+
+	\newarray\LowerTwoPurple
+	\readarray{LowerTwoPurple}{%
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 1 & 1 & 3 & 3 & 3 &
+		3 & 3 & 3 & 1 & 1 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 &
+		3 & 3 & 3 & 3 & 3 & 3 & 3 & 3}	
+		
+	\newarray\LowerThree
+	\readarray{LowerThree}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 &
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 &
+		1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 &
+		1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 &
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 &
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+		
+	\newarray\LowerThreePurple
+	\readarray{LowerThreePurple}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 3 & 3 & 3 & 3 & 3 & 3 & 1 &
+		1 & 3 & 3 & 3 & 3 & 3 & 3 & 1 &
+		1 & 3 & 3 & 1 & 1 & 3 & 3 & 1 &
+		1 & 3 & 3 & 1 & 1 & 3 & 3 & 1 &
+		1 & 3 & 3 & 3 & 3 & 3 & 3 & 1 &
+		1 & 3 & 3 & 3 & 3 & 3 & 3 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+		
+	\newarray\LowerFour
+	\readarray{LowerFour}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 &
+		1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 &
+		1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 &
+		1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+		
+	\newarray\LowerFourPurple
+	\readarray{LowerFourPurple}{%
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 3 & 3 & 3 & 3 & 1 & 1 &
+		1 & 1 & 3 & 1 & 1 & 3 & 1 & 1 &
+		1 & 1 & 3 & 1 & 1 & 3 & 1 & 1 &
+		1 & 1 & 3 & 3 & 3 & 3 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 &
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1}
+		
+	\newsavebox\LowerOnePurpleCash
+	\begin{lrbox}{\LowerOnePurpleCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerOnePurple}
+		\end{tikzpicture}
+	\end{lrbox}
+		
+	\newsavebox\LowerTwoCash
+	\begin{lrbox}{\LowerTwoCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerTwo}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\LowerTwoPurpleCash
+	\begin{lrbox}{\LowerTwoPurpleCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerTwoPurple}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\LowerThreeCash
+	\begin{lrbox}{\LowerThreeCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerThree}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\LowerThreePurpleCash
+	\begin{lrbox}{\LowerThreePurpleCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerThreePurple}
+		\end{tikzpicture}
+	\end{lrbox}
+
+	\newsavebox\LowerFourCash
+	\begin{lrbox}{\LowerFourCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerFour}
+		\end{tikzpicture}
+	\end{lrbox}
+	
+	\newsavebox\LowerFourPurpleCash
+	\begin{lrbox}{\LowerFourPurpleCash}
+		\begin{tikzpicture}[scale=0.25]
+			\drawBinaryImage{8}{8}{LowerFourPurple}
+		\end{tikzpicture}
+	\end{lrbox}
+		
+	\pgfmathtruncatemacro{\A}{105}
+	
+	\pgfmathtruncatemacro{\B}{401}
+	
+	\xdef\uptwoP{0}
+	
+	\xdef\upthreeP{0}
+	
+	\xdef\upfourP{0}	
+	
+	\xdef\inputImage{\InputImageCash}
+	
+	\xdef\upperOne{\UpperOneCash}
+	
+	\xdef\upperTwo{\UpperTwoCash}
+	
+	\xdef\upperThree{\UpperThreeCash}
+	
+	\xdef\upperFour{\UpperFourCash}			
+	
+	% lower
+	
+	\xdef\lotwoP{0}
+	
+	\xdef\lothreeP{0}
+	
+	\xdef\lofourP{0}
+	
+	\xdef\lowerOne{\UpperOneCash}
+	
+	\xdef\lowerTwo{\LowerTwoCash}
+	
+	\xdef\lowerThree{\LowerThreeCash}
+	
+	\xdef\lowerFour{\LowerFourCash}
+
+	\PreviewEnvironment{tikzpicture}	
+	\xdef\i{0}
+	\whiledo{\i<\A}{%
+	\begin{tikzpicture}
+	
+	\useasboundingbox (-5.5 , -3.8) rectangle (5 , 3.7);											
+					
+				\ifthenelse{\i<35}
+					{
+						\pgfmathsetmacro{\temp}{\i*2-110}									
+						\xdef\uptwoP{\temp}	
+						\xdef\upthreeP{\temp}
+						\xdef\upfourP{\temp}						
+					}{}
+					
+				\ifthenelse{\i>34 \AND \i<69}
+					{
+						\pgfmathsetmacro{\temp}{\i*2-110}									
+						\xdef\upthreeP{\temp}
+						\xdef\upfourP{\temp}						
+					}
+					{}
+
+				\ifthenelse{\i>68 \AND \i<103}
+					{
+						\pgfmathsetmacro{\temp}{\i*2-110}									
+						\xdef\upfourP{\temp}
+					}
+					{}
+			
+				\node[inner sep=0, xshift=-9, yshift=2.5cm](inputImage){\usebox\inputImage};
+				
+				\node[fill=white, inner sep=0, below = 0.09cm of inputImage]{\tiny Imagem $f$};											
+				
+
+				\node[inner sep=0, fill=white,xshift=\upfourP] (upper4) {\usebox\upperFour};	
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper4]{\tiny $\mathcal{X}^7$};	
+								
+		
+				\node[inner sep=0, fill=white,xshift=\upthreeP] (upper3) {\usebox\upperThree};			
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper3]{\tiny $\mathcal{X}^5$};
+												
+							
+				\node[inner sep=0, fill=white,xshift=\uptwoP] (upper2) {\usebox\upperTwo};						
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper2]{\tiny $\mathcal{X}^3$};
+								
+					
+				\node[inner sep=0, fill=white,xshift=-110] (upper1) {\usebox\upperOne};
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper1]{\tiny $\mathcal{X}^1$};									
+				
+				% lower sets		
+
+	\end{tikzpicture}
+	  \pgfmathtruncatemacro{\temp}{\i+1}%
+	  \xdef\i{\temp}%
+	  %\end{center}%
+	  \newpage%
+	}
+	% second animation
+	\xdef\i{0}
+	\whiledo{\i<\B}{%
+	\begin{tikzpicture}
+
+	
+			\useasboundingbox (-5.5 , -3.8) rectangle (5 , 3.7);				
+			
+			\pgfmathtruncatemacro{\div}{\intcalcMod{\i}{20}}	
+			
+				% first
+			
+				\ifthenelse{\i<101}
+				{
+					\ifthenelse{\div>-1 \AND \div<11}
+					{
+						\xdef\upperOne{\UpperOneCash}
+						\xdef\inputImage{\InputImageCash}										
+					}
+					{						
+						\xdef\upperOne{\UpperOneGreenCash}
+						\xdef\inputImage{\InputImageUoneCash}
+					}
+				}
+				{}
+			
+				% second image
+			
+				\ifthenelse{\i>100 \AND \i<201}
+				{
+					\ifthenelse{\div>-1 \AND \div<11}
+					{
+						\xdef\upperTwo{\UpperTwoCash}
+						\xdef\inputImage{\InputImageCash}					
+					}
+					{
+						\xdef\upperTwo{\UpperTwoGreenCash}
+						\xdef\inputImage{\InputImageUtwoCash}						
+					}
+				}
+				{}
+				
+				% third image
+			
+				\ifthenelse{\i>200 \AND \i<301}
+				{
+					\ifthenelse{\div>-1 \AND \div<11}
+					{
+						\xdef\upperThree{\UpperThreeCash}
+						\xdef\inputImage{\InputImageCash}					
+					}
+					{
+						\xdef\upperThree{\UpperThreeGreenCash}
+						\xdef\inputImage{\InputImageUthreeCash}						
+					}
+				}
+				{}			
+
+				% last image
+			
+				\ifthenelse{\i>300 \AND \i<401}
+				{
+					\ifthenelse{\div>-1 \AND \div<11}
+					{
+						\xdef\upperFour{\UpperFourCash}
+						\xdef\inputImage{\InputImageCash}					
+					}
+					{
+						\xdef\upperFour{\UpperFourGreenCash}
+						\xdef\inputImage{\InputImageUfourCash}						
+					}
+				}
+				{}	
+				
+				\node[inner sep=0, xshift=-9, yshift=2.5cm](inputImage){\usebox\inputImage};
+				
+				\node[fill=white, inner sep=0, below = 0.09cm of inputImage]{\tiny Imagem $f$};											
+				
+
+				\node[inner sep=0, fill=white, xshift=\upfourP] (upper4) {\usebox\upperFour};	
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper4]{\tiny $\mathcal{X}^7$};	
+								
+		
+				\node[inner sep=0, fill=white, xshift=\upthreeP] (upper3) {\usebox\upperThree};			
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper3]{\tiny $\mathcal{X}^5$};
+												
+							
+				\node[inner sep=0, fill=white, xshift=\uptwoP] (upper2) {\usebox\upperTwo};						
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper2]{\tiny $\mathcal{X}^3$};
+								
+					
+				\node[inner sep=0, fill=white, xshift=-110] (upper1) {\usebox\upperOne};
+				
+				\node[fill=white, inner sep=0, below = 0.06cm of upper1]{\tiny $\mathcal{X}^1$};		
+				
+				
+				
+				\ifthenelse{\i>399}{
+
+					\node[inner sep=0, fill=white, yshift=-2.4cm, xshift=\upfourP] (lower4) {\usebox\lowerFour};	
+				
+					\node[fill=white, inner sep=0, below = 0.06cm of lower4]{\tiny $\mathcal{X}_2$};	
+								
+		
+					\node[inner sep=0, fill=white, yshift=-2.4cm, xshift=\upthreeP] (lower3) {\usebox\lowerThree};			
+				
+					\node[fill=white, inner sep=0, below = 0.06cm of lower3]{\tiny $\mathcal{X}_4$};
+												
+							
+					\node[inner sep=0, fill=white, yshift=-2.4cm, xshift=\uptwoP] (lower2) {\usebox\lowerTwo};						
+				
+					\node[fill=white, inner sep=0, below = 0.06cm of lower2]{\tiny $\mathcal{X}_6$};
+								
+					
+					\node[inner sep=0, fill=white, yshift=-2.4cm,xshift=-110] (lower1) {\usebox\lowerOne};
+				
+					\node[fill=white, inner sep=0, below = 0.06cm of lower1]{\tiny $\mathcal{X}_8$};						
+				
+				}{}
+
+	\end{tikzpicture}%
+	  \pgfmathtruncatemacro{\temp}{\i+1}%
+	  \xdef\i{\temp}%
+	  \newpage%
+	}		
+	
+\end{document}

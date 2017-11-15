@@ -33,7 +33,7 @@ Para gerar a animação de forma otimizada, a ideia é contruir um PDF com todos
 
 ## Arquivo main.tex
 
-Alguns detalhes dobre o arquivo base [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) são dados abaixo.
+Alguns detalhes sobre o arquivo base [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex) são dados abaixo.
 
 ### Classe base
 
@@ -111,7 +111,6 @@ Finalmente, após fechar o *environment* **tikzpicture** adicionamos os passos d
 Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex).
 
 ```
-
 \documentclass[10pt]{article}
 
 \usepackage{tikz}
@@ -148,7 +147,7 @@ Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber
 
 ## Criando as animações
 
-As animações podem ser incluidas dentro do **article**, **book** e **beamer**. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
+As animações podem ser incluidas dentro do **article**, **book**, **beamer** e qualquer variação. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações utilizando a classe **standalone** (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
 
 ```
 % classe "shell" do LaTeX

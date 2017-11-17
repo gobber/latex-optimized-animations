@@ -20,7 +20,7 @@ Para os outros leitores PDFs que não suportam o pacote *animate* existe a opç�
 
 Basicamente o pacote *animate* fornece dois comandos LaTeX para construir as animações. Como queremos contruir de forma otimizada, optamos por gerar todos os frames em um PDF (sera discutido abaixo) e então incluir pelo comando **\animategraphics**.
 
-```
+```Tex
 % o parâmetro [controls] inclui um controle no rodapé da animação
 \animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}	
 ```
@@ -39,7 +39,7 @@ Alguns detalhes sobre o arquivo base [main.tex](https://github.com/gobber/latex-
 
 Utilizamos a classe base *article*, poderiam ser outras, mas com o conteúdo disponível na internet ficou mais fácil utilizar esta.
 
-```
+```Tex
 % classe base
 \documentclass[10pt]{article}
 ```
@@ -47,7 +47,8 @@ Utilizamos a classe base *article*, poderiam ser outras, mas com o conteúdo dis
 ### Pacotes necessários
 
 Como estamos interessados em construir frames a partir de figuras vetorizadas, o mínimo que precisamos é dos dois pacotes seguintes:
-```
+
+```Tex
 % pacote para construir figuras vetorizadas
 \usepackage{tikz}
 % pacote com o comando de laço \whiledo
@@ -147,7 +148,7 @@ Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber
 
 ## Criando as animações
 
-As animações podem ser incluidas dentro do **article**, **book** e **beamer**. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
+As animações podem ser incluidas dentro do **article**, **book**, **beamer** e qualquer variação. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações utilizando a classe **standalone** (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
 
 ```
 % classe "shell" do LaTeX

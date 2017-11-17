@@ -20,7 +20,7 @@ Para os outros leitores PDFs que não suportam o pacote *animate* existe a opç�
 
 Basicamente o pacote *animate* fornece dois comandos LaTeX para construir as animações. Como queremos contruir de forma otimizada, optamos por gerar todos os frames em um PDF (sera discutido abaixo) e então incluir pelo comando **\animategraphics**.
 
-```
+```Tex
 % o parâmetro [controls] inclui um controle no rodapé da animação
 \animategraphics[parâmetros]{número de frames}{caminho do pdf}{}{}	
 ```
@@ -39,7 +39,7 @@ Alguns detalhes sobre o arquivo base [main.tex](https://github.com/gobber/latex-
 
 Utilizamos a classe base *article*, poderiam ser outras, mas com o conteúdo disponível na internet ficou mais fácil utilizar esta.
 
-```
+```Tex
 % classe base
 \documentclass[10pt]{article}
 ```
@@ -47,7 +47,8 @@ Utilizamos a classe base *article*, poderiam ser outras, mas com o conteúdo dis
 ### Pacotes necessários
 
 Como estamos interessados em construir frames a partir de figuras vetorizadas, o mínimo que precisamos é dos dois pacotes seguintes:
-```
+
+```Tex
 % pacote para construir figuras vetorizadas
 \usepackage{tikz}
 % pacote com o comando de laço \whiledo
@@ -58,7 +59,7 @@ Como estamos interessados em construir frames a partir de figuras vetorizadas, o
 
 Cada figura tikz gerada no loop vai ser uma página (frame) no PDF da animação. Assim, queremos imprimir nas páginas o *environment* *tikzpicture*, fazemos isso incluindo a chamada do comando **\PreviewEnvironment**.
 
-```
+```Tex
 % vamos gerar animações utilizando tikzpicture
 \PreviewEnvironment{tikzpicture}
 ```
@@ -67,21 +68,21 @@ Cada figura tikz gerada no loop vai ser uma página (frame) no PDF da animação
 
 Para gerar os frames precisamos determinar o número máximo de frames, fazemos isso com uma variável criada via **\def**.
 
-```
+```Tex
 % 100 frames ou 100 figuras
 \def\Frames{100}
 ```
 
 Para incrementar o contador do loop existem várias formas. Escolhemos aqui utilizar uma variável via **\xdef**. Basicamente o **\xdef** cria uma variável em contexto global, isso é necessário porque queremos alterar a variável em cada passo do loop.
 
-```
+```Tex
 % define um contador para o loop
 \xdef\i{0}
 ```
 
 O loop funciona via **\whiledo**. Dentro do loop nós fazemos a chamada do *environment* **tikzpicture** e adicionamos alguns outros códigos dentro do *environment*:
 
-```
+```Tex
 % variáveis para controlar o bounding box de cada página
 \def\xI{-1} \def\xF{1} \def\yI{-1} \def\yF{1}
 
@@ -97,7 +98,7 @@ Finalmente, após fechar o *environment* **tikzpicture** adicionamos os passos d
 * Atualizar **\i** via **\xdef** (contexto global).
 * Criar uma nova página com o comando **\newpage**.
 
-```
+```Tex
 % computar o novo valor do contador utilizando uma variável temporária
 \pgfmathtruncatemacro{\temp}{\i+1}%
 % atualiza o contador
@@ -110,7 +111,7 @@ Finalmente, após fechar o *environment* **tikzpicture** adicionamos os passos d
 
 Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber/latex-optimized-animations/blob/master/main.tex).
 
-```
+```Tex
 \documentclass[10pt]{article}
 
 \usepackage{tikz}
@@ -149,7 +150,7 @@ Finalizando, temos o conteúdo do documento [main.tex](https://github.com/gobber
 
 As animações podem ser incluidas dentro do **article**, **book**, **beamer** e qualquer variação. São fornecidos nos [exemplos](https://github.com/gobber/latex-optimized-animations/tree/master/examples) arquivos com o sufixo **-animate.tex**, nestes arquivos contém um código de exemplo para rodar as animações utilizando a classe **standalone** (lembre-se que as animações so funcionam nos leitores de PDF da **Adobe**).
 
-```
+```Tex
 % classe "shell" do LaTeX
 \documentclass[]{standalone}
 
@@ -167,7 +168,7 @@ As animações podem ser incluidas dentro do **article**, **book**, **beamer** e
 
 Para chamar a animação dentro do **beamer** é necessário utilizar a opção *fragile*:
 
-```
+```Tex
 \documentclass{beamer}
 
 % código omitido
